@@ -1,0 +1,23 @@
+{
+  "name": "@testbank/aws-cf-signed-url",
+  "version": "1.0.2",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "@types/jsrsasign": "^10.5.4",
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.11.15",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "jsrsasign": "^10.6.1",
+    "lodash": "^4.17.21",
+    "url": "^0.11.0"
+  }
+}

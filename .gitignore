@@ -1,0 +1,15 @@
+.DS_STORE
+xcuserdata/
+**/node_modules
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+dist/
+.eslintcache
+.idea/*
+.nyc_output/
+coverage/
+pkg/
