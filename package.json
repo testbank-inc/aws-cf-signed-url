@@ -1,6 +1,6 @@
 {
   "name": "@testbank/aws-cf-signed-url",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "lib/index.js",
   "homepage": "https://github.com/testbank-inc/aws-cf-signed-url",
   "repository": "github:testbank-inc/aws-cf-signed-url",
