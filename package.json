@@ -6,6 +6,7 @@
   "repository": "github:testbank-inc/aws-cf-signed-url",
   "types": "lib/index.d.ts",
   "scripts": {
+    "prepublishOnly": "yarn build",
     "build": "tsc"
   },
   "keywords": [],
