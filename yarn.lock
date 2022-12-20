@@ -5,9 +5,9 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@testbank/aws-cf-signed-url@workspace:.":
+"@testbank-inc/aws-cf-signed-url@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@testbank/aws-cf-signed-url@workspace:."
+  resolution: "@testbank-inc/aws-cf-signed-url@workspace:."
   dependencies:
     "@types/jsrsasign": ^10.5.4
     "@types/lodash": ^4.14.191
