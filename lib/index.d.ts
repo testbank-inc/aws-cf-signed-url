@@ -6,6 +6,7 @@ export type TGetSignedUrl = {
 export declare class SignedURLService {
     keyPairId: string;
     privateKey: string;
-    constructor(keyPairId: string, privateKey: string);
+    defaultExpireTime: number;
+    constructor(keyPairId: string, privateKey: string, defaultExpireTime?: number);
     getSignedURL({ cfURL, expireTime, ipRange }: TGetSignedUrl): string;
 }
