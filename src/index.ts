@@ -20,15 +20,18 @@ export type TGetSignedUrl = {
 export class SignedURLService {
     keyPairId: string;
     privateKey: string;
+    defaultExpireTime: number;
 
-    constructor(keyPairId: string, privateKey: string) {
+    constructor(keyPairId: string, privateKey: string, defaultExpireTime = Math.round(Date.now() + 30000)) {
         this.keyPairId = keyPairId
         this.privateKey = getPrivateKey(privateKey)
+        this.defaultExpireTime = defaultExpireTime
     }
 
     getSignedURL({cfURL, expireTime, ipRange}: TGetSignedUrl): string {
         const privateKey = this.privateKey
-        const policy = createPolicy({ url: cfURL, expireTime, ipRange })
+        const expireTimeVale = expireTime || this.defaultExpireTime
+        const policy = createPolicy({ url: cfURL, expireTime: expireTimeVale, ipRange })
         const signature = createPolicySignature(policy, privateKey)
         const policyStr = new Buffer(policy.toJSON()).toString('base64')
         const parsedUrl = url.parse(cfURL, true);
